@@ -36,6 +36,22 @@ function M.config()
   end
 
   local lspconfig = require "lspconfig"
+  util = require "lspconfig/util"
+  lspconfig.gopls.setup {
+    cmd = {"gopls"},
+    filetypes = {"go", "gomod", "gowork", "gotmpl"},
+    root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = false,
+      },
+    },
+  }
+  
+  
   local on_attach = function(client, bufnr)
     if client.name == "tsserver" then
       client.server_capabilities.documentFormattingProvider = false
