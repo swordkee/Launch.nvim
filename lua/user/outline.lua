@@ -4,7 +4,11 @@ local M = {
     commit = "512791925d57a61c545bc303356e8a8f7869763c",
   }
   function M.config()
-    require("symbols-outline").setup {}
+    require("symbols-outline").setup ({
+        auto_close = false,
+        highlight_hovered_item = true,
+        width = 15
+    })
     vim.api.nvim_set_keymap("n", "<leader>so", "<cmd>SymbolsOutline<CR>", { silent = true })
   end
   
