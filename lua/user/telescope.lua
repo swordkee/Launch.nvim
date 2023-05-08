@@ -8,6 +8,14 @@ local M = {
       "ahmedkhalf/project.nvim",
       commit = "685bc8e3890d2feb07ccf919522c97f7d33b94e4",
     },
+    {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      commit = "580b6c48651cabb63455e97d7e131ed557b8c7e2",
+      build = "make",
+      config = function()
+        require("telescope").load_extension("fzf")
+      end,
+    }
   },
 }
 

@@ -2,14 +2,6 @@ local M = {
   "akinsho/toggleterm.nvim",
   commit = "19aad0f41f47affbba1274f05e3c067e6d718e1e",
   event = "VeryLazy",
-  dependencies = {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    commit = "580b6c48651cabb63455e97d7e131ed557b8c7e2",
-    build = "make",
-    config = function()
-      require("telescope").load_extension("fzf")
-    end,
-  },
 }
 
 function M.config()
