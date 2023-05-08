@@ -35,7 +35,7 @@ function M.config()
     keymap(bufnr, "n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
     keymap(bufnr, "n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
     keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-    keymap(bufnr, "n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
+    keymap(bufnr, "n", "<leader>lf", "<cmd>lua vim.lsp.buf.format({ timeout_ms = 500 })<CR>", opts)
   end
 
   local lspconfig = require "lspconfig"
@@ -47,9 +47,9 @@ function M.config()
       client.server_capabilities.documentFormattingProvider = false
     end
 
-    -- if client.name == "sumneko_lua" then
-    --   client.server_capabilities.documentFormattingProvider = false
-    -- end
+    if client.name == "sumneko_lua" then
+      client.server_capabilities.documentFormattingProvider = false
+    end
 
     lsp_keymaps(bufnr)
     require("illuminate").on_attach(client)

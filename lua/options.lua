@@ -42,9 +42,4 @@ vim.opt.iskeyword:append "-"                    -- treats words with `-` as sing
 vim.opt.formatoptions:remove { "c", "r", "o" }  -- This is a sequence of letters which describes how automatic formatting is to be done
 vim.opt.linebreak = true
 vim.opt.linespace = 8
-if vim.g.neovide then
-    -- vim.g.neovide_fullscreen = true
-    vim.g.neovide_remember_window_size = true
-    vim.g.neovide_cursor_vfx_mode = ""
-end
 
