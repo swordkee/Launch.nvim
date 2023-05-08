@@ -30,7 +30,7 @@ local M = {
     keymap({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
 
     -- Rename all occurrences of the hovered word for the entire file
-    keymap("n", "gr", "<cmd>Lspsaga rename<CR>")
+    -- keymap("n", "gr", "<cmd>Lspsaga rename<CR>")
 
     -- Rename all occurrences of the hovered word for the selected files
     keymap("n", "gr", "<cmd>Lspsaga rename ++project<CR>")
@@ -43,7 +43,7 @@ local M = {
     keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
 
     -- Go to definition
-    keymap("n","gd", "<cmd>Lspsaga goto_definition<CR>")
+    -- keymap("n","gd", "<cmd>Lspsaga goto_definition<CR>")
 
     -- Peek type definition
     -- You can edit the file containing the type definition in the floating window
