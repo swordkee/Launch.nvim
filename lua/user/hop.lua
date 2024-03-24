@@ -1,7 +1,6 @@
 local M = {
-    "phaazon/hop.nvim",
+    "smoka7/hop.nvim",
     event = "BufRead",
-    commit = "90db1b2c61b820e230599a04fedcd2679e64bd07",
   }
   function M.config()
     require("hop").setup {}
