@@ -53,3 +53,9 @@ vim.cmd [[set iskeyword+=-]]
 vim.g.netrw_banner = 0
 vim.g.netrw_mouse = 2
 
+-- neovide
+-- vim.g.neovide_fullscreen = true
+vim.g.neovide_remember_window_size = true
+vim.g.neovide_input_ime = true
+vim.g.neovide_cursor_animation_length = 0
+vim.g.neovide_cursor_vfx_mode = ""
