@@ -1,17 +1,14 @@
 local M = {
     "nvimdev/lspsaga.nvim",
     event = "LspAttach",
-    commit = "e39c210c5f19a01a627e1d25544e5aca52efb522",
     dependencies = {
         {
           "nvim-tree/nvim-web-devicons",
           event = "VeryLazy",
-          commit = "226c1475a46a2ef6d840af9caa0117a439465500"
         },
         {
           "nvim-treesitter/nvim-treesitter",
           event = "VeryLazy",
-          commit = "0568104bf8d0c3ab16395433fcc5c1638efc25d4"
         },
       },
     }
